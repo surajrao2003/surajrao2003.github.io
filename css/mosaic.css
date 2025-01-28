@@ -1,0 +1,53 @@
+div.mosaic-block {
+	display: inline-block;
+	position:relative;
+	overflow: hidden;
+	width: 30%;
+	height: 20%;
+	margin: 1.3%;
+}
+
+div.details * {
+	margin:0;
+	padding:0;
+	border:none;
+	outline:none;
+}
+
+.details{ margin:1.5% 2%; }	
+
+.details h4{ font:300 16px 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height:160%; letter-spacing:0.15em; color:#fff; text-shadow:1px 1px 0 rgb(0,0,0); }
+.details p{ font:300 12px 'Lucida Grande', Tahoma, Verdana, sans-serif; color:#aaa; text-shadow:1px 1px 0 rgb(0,0,0);}
+a{ text-decoration:none; }
+
+	.mosaic-backdrop {
+		height: 100%;
+		width: 100%;
+	}
+
+	.mosaic-backdrop img{
+		bottom: 0;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+    	padding: 0;
+    	display: block;
+	}
+	
+	.mosaic-overlay {
+		display:none;
+		z-index:5;
+		position:absolute;
+		width:100%;
+		height:100%;
+		background:#111;
+	}
+			
+		.bar .mosaic-overlay {
+			bottom:-45%;
+			height:45%;
+			background:url(../images/bg-black.png);
+		}
+		
+		
