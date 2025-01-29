@@ -5,6 +5,13 @@ body {
 	background-image: repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(255,255,255,.5) 8px, rgba(255,255,255,.5) 10px);
 }
 
+@font-face {
+    font-family: 'Michroma';
+    src: url('.././Michroma-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 h2{
 	font-family: 'Michroma', sans-serif;
 	font-size: 22px;
