@@ -1,1 +1,17 @@
 CLAUDE.md
+prepros-6.config
+
+# Unused images kept locally for storage/reference only
+images/asset2.png
+images/github_profilepic.jpg
+images/IIITPune2024.jpg
+images/mantra.png
+images/suraj_logo.png
+images/Suraj_pic.jpg
+images/suraj_profilepic.jpg
+images/umd_aerial_view.avif
+images/umd2.jpeg
+
+# Referenced only by commented-out (disabled) project blocks
+images/secure_cloud.png
+images/human_face_detection.png
