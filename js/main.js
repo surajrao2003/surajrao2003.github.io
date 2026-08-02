@@ -37,27 +37,6 @@
 	};
 
 
-	var counter = function() {
-		$('.js-counter').countTo({
-			 formatter: function (value, options) {
-	      return value.toFixed(options.decimals);
-	    },
-		});
-	};
-
-
-	var counterWayPoint = function() {
-		if ($('#colorlib-counter').length > 0 ) {
-			$('#colorlib-counter').waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-					setTimeout( counter , 400);					
-					$(this.element).addClass('animated');
-				}
-			} , { offset: '90%' } );
-		}
-	};
-
 	// Animations
 	var contentWayPoint = function() {
 		var i = 0;
@@ -230,67 +209,144 @@
 
 	};
 
-	var stickyFunction = function() {
+	var themeToggle = function() {
 
-		var h = $('.image-content').outerHeight();
+		var root = document.documentElement;
+		var storageKey = 'theme';
 
-		if ($(window).width() <= 992 ) {
-			$("#sticky_item").trigger("sticky_kit:detach");
+		var applyTheme = function(theme) {
+			root.setAttribute('data-theme', theme);
+		};
+
+		var storedTheme = localStorage.getItem(storageKey);
+		if (storedTheme === 'dark' || storedTheme === 'light') {
+			applyTheme(storedTheme);
+		} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			applyTheme('dark');
 		} else {
-			$('.sticky-parent').removeClass('stick-detach');
-			$("#sticky_item").trigger("sticky_kit:detach");
-			$("#sticky_item").trigger("sticky_kit:unstick");
+			applyTheme('light');
 		}
 
-		$(window).resize(function(){
-			var h = $('.image-content').outerHeight();
-			$('.sticky-parent').css('height', h);
-
-
-			if ($(window).width() <= 992 ) {
-				$("#sticky_item").trigger("sticky_kit:detach");
-			} else {
-				$('.sticky-parent').removeClass('stick-detach');
-				$("#sticky_item").trigger("sticky_kit:detach");
-				$("#sticky_item").trigger("sticky_kit:unstick");
-
-				$("#sticky_item").stick_in_parent();
-			}
-			
-
-			
-
+		$('#theme-toggle').on('click', function() {
+			var current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+			var next = current === 'dark' ? 'light' : 'dark';
+			applyTheme(next);
+			localStorage.setItem(storageKey, next);
 		});
-
-		$('.sticky-parent').css('height', h);
-
-		$("#sticky_item").stick_in_parent();
 
 	};
 
-	var owlCrouselFeatureSlide = function() {
-		$('.owl-carousel').owlCarousel({
-			animateOut: 'fadeOut',
-		   animateIn: 'fadeIn',
-		   autoplay: true,
-		   loop:true,
-		   margin:0,
-		   nav:true,
-		   dots: false,
-		   autoHeight: true,
-		   items: 1,
-		   navText: [
-		      "<i class='icon-arrow-left3 owl-direction'></i>",
-		      "<i class='icon-arrow-right3 owl-direction'></i>"
-	     	]
-		})
+	var contactForm = function() {
+
+		var $form = $('#contact-form');
+		if ($form.length === 0) {
+			return;
+		}
+
+		var recipient = 'surajrao@umd.edu';
+		var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+		var fields = {
+			name: { $input: $('#contact-name'), $error: $('#contact-name-error') },
+			email: { $input: $('#contact-email'), $error: $('#contact-email-error') },
+			company: { $input: $('#contact-company'), $error: $('#contact-company-error') },
+			subject: { $input: $('#contact-subject'), $error: $('#contact-subject-error') },
+			message: { $input: $('#contact-message'), $error: $('#contact-message-error') }
+		};
+
+		var showError = function(field, message) {
+			field.$input.addClass('is-invalid');
+			field.$error.text(message).addClass('is-visible');
+		};
+
+		var clearError = function(field) {
+			field.$input.removeClass('is-invalid');
+			field.$error.text('').removeClass('is-visible');
+		};
+
+		var validate = function() {
+			var isValid = true;
+
+			var name = $.trim(fields.name.$input.val());
+			var email = $.trim(fields.email.$input.val());
+			var subject = $.trim(fields.subject.$input.val());
+			var message = $.trim(fields.message.$input.val());
+
+			if (!name) {
+				showError(fields.name, 'Please enter your name.');
+				isValid = false;
+			} else {
+				clearError(fields.name);
+			}
+
+			if (!email) {
+				showError(fields.email, 'Please enter your email address.');
+				isValid = false;
+			} else if (!emailPattern.test(email)) {
+				showError(fields.email, 'Please enter a valid email address.');
+				isValid = false;
+			} else {
+				clearError(fields.email);
+			}
+
+			clearError(fields.company);
+
+			if (!subject) {
+				showError(fields.subject, 'Please enter a subject.');
+				isValid = false;
+			} else {
+				clearError(fields.subject);
+			}
+
+			if (!message) {
+				showError(fields.message, 'Please enter a message.');
+				isValid = false;
+			} else {
+				clearError(fields.message);
+			}
+
+			return isValid;
+		};
+
+		$.each(fields, function(key, field) {
+			field.$input.on('input', function() {
+				clearError(field);
+			});
+		});
+
+		$form.on('submit', function(event) {
+			event.preventDefault();
+
+			if (!validate()) {
+				return;
+			}
+
+			var name = $.trim(fields.name.$input.val());
+			var email = $.trim(fields.email.$input.val());
+			var company = $.trim(fields.company.$input.val());
+			var subject = $.trim(fields.subject.$input.val());
+			var message = $.trim(fields.message.$input.val());
+
+			var body = 'Name: ' + name + '\n' +
+				'Email: ' + email + '\n' +
+				(company ? 'Company: ' + company + '\n' : '') +
+				'\n' +
+				'Message:\n' + message;
+
+			var mailtoLink = 'mailto:' + recipient +
+				'?subject=' + encodeURIComponent(subject) +
+				'&body=' + encodeURIComponent(body);
+
+			window.location.href = mailtoLink;
+		});
+
 	};
 
 	// Document on load.
 	$(function(){
+		contactForm();
+		themeToggle();
 		fullHeight();
-		counter();
-		counterWayPoint();
 		contentWayPoint();
 		burgerMenu();
 
@@ -302,8 +358,6 @@
 
 		mobileMenuOutsideClick();
 		sliderMain();
-		stickyFunction();
-		owlCrouselFeatureSlide();
 	});
 
 
