@@ -31,7 +31,9 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-	
+	<!-- Hero-only fonts (Shivoham reference match) -->
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=DM+Sans:wght@400&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -122,26 +124,24 @@
 
 		<div id="colorlib-main">
 			
-			<section id="colorlib-hero" class="js-fullheight" data-section="home">
-				<div class="flexslider js-fullheight">
-					<ul class="slides">
-						<li style="background-image: url(images/suraj_background_profile.jpg);">
-						<div class="overlay"></div>
-							<div class="container-fluid">
-								<div class="row">
-									<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-										<div class="slider-text-inner js-fullheight">
-											<div class="desc">
-                                                <h1 style="color:white; text-align: left;">Hi,<br></h1>
-                                                <h1 style="color:white; text-align: left;">I'm Suraj</h1>
-                                                <p><a Style = "color:white" class="btn btn-primary" href="Suraj Rao's Resume.pdf" target="_blank" download >Download My Resume <i class="icon-download4"></i></a></p>
-                                            </div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
+			<section id="colorlib-hero" data-section="home">
+				<div class="hero-orb-content">
+					<span class="hero-location"><i class="hero-location-dot" aria-hidden="true"></i>Washington, D.C.</span>
+					<h1 class="hero-name">Hi, I'm Suraj</h1>
+					<p class="hero-tagline"> AI Engineer crafting intelligent systems across vision, language, and automation.</p>
+
+					<p class="hero-resume"><a class="btn btn-primary" href="Suraj Rao's Resume.pdf" target="_blank" download>Download My Resume <i class="icon-download4"></i></a></p>
+
+					<!-- Voice agent hero orb (WebGL). Remove this block + js/voice-orb.js + js/voice-orb-3d.js + their <script> tags to drop the voice agent entirely. -->
+					<div class="voice-orb-wrap">
+						<button type="button" id="voice-orb" class="voice-orb" aria-label="Start voice conversation">
+							<canvas id="voice-orb-canvas" class="voice-orb-canvas" aria-hidden="true"></canvas>
+							<i class="icon-microphone voice-orb-icon" aria-hidden="true"></i>
+						</button>
+						<p id="voice-orb-caption" class="voice-orb-caption">Click the orb to start talking</p>
+						<button type="button" id="voice-orb-end" class="voice-orb-end" hidden>End conversation</button>
+					</div>
+					<!-- /Voice agent hero orb -->
 				</div>
 			</section>
 
@@ -664,9 +664,9 @@
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
 
-	<!-- ElevenLabs Conversational AI voice agent -->
-	<elevenlabs-convai agent-id="agent_8101kyfxtn8tf3vrnt1z64nfq9z6" placement="bottom-right"></elevenlabs-convai>
-	<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+	<!-- Voice agent (ElevenLabs) + its 3D orb visual — hero-scoped only. Both files + this block are safe to delete together to remove the voice agent. -->
+	<script type="module" src="js/voice-orb-3d.js"></script>
+	<script type="module" src="js/voice-orb.js"></script>
 
 </body>
 </html>
