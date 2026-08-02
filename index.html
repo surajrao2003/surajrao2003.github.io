@@ -57,7 +57,7 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-	<link rel="icon" style="mask-size:100%;"  href="images/suraj_logo2.png" type="image/png" sizes="256×256">
+	<link rel="icon" style="mask-size:100%;"  href="images/suraj_logo3.png" type="image/png" sizes="256×256">
 
 	<script type="text/javascript">
 		window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
@@ -72,20 +72,24 @@
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 			<div class="text-center">
+				<button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+					<i class="icon-moon theme-toggle-icon-dark"></i>
+					<i class="icon-sun2 theme-toggle-icon-light"></i>
+				</button>
 				<div class="author-img" style="background-image: url(images/suraj_sidebar_profile.png);"></div>
-				<h1 id="colorlib-logo"><a href="index.html">Suraj Rao</a></h1>
-				<span class="position"><a href="#">MSAML Student at UMD</a> </span>
+				<h1 id="colorlib-logo"><span>Suraj Rao</span></h1>
+				<span class="position">MSAML Student at UMD</span>
 			</div>
-			
+
 			<nav id="colorlib-main-menu" role="navigation" class="navbar">
 				<div id="navbar" class="collapse">
 					<ul>
 						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
 						<li><a href="#" data-nav-section="about">About</a></li>
-						<li><a href="#" data-nav-section="portfolio">Portfolio</a></li>
-						<li><a href="#" data-nav-section="expertise">Expertise</a></li>
-						<li><a href="#" data-nav-section="testimonials">Testimonials</a></li>
 						<li><a href="#" data-nav-section="experience">Experience</a></li>
+						<li><a href="#" data-nav-section="portfolio">Projects</a></li>
+						<li><a href="#" data-nav-section="expertise">Skills</a></li>
+						<li><a href="#" data-nav-section="testimonials">Testimonials</a></li>
 						<li><a href="#" data-nav-section="education">Education</a></li>
 						<li><a href="#" data-nav-section="snapshots">Snapshots</a></li>
 						<li><a href="#" data-nav-section="contact">Contact</a></li>
@@ -97,17 +101,17 @@
 			<div class="social_icon" style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
     <ul style="display: flex; gap: 10px; list-style: none; padding: 0; margin: 0;">
         <li>
-            <a style="color: rgb(52, 48, 48);" href="https://www.linkedin.com/in/rao-suraj/" target="_blank">
+            <a class="social-icon-link" href="https://www.linkedin.com/in/rao-suraj/" target="_blank">
                 <i class="fa-brands fa-linkedin fa-xl"></i>
             </a>
         </li>
         <li>
-            <a style="color: rgb(52, 48, 48);" href="https://github.com/surajrao2003" target="_blank">
+            <a class="social-icon-link" href="https://github.com/surajrao2003" target="_blank">
                 <i class="fa-brands fa-github fa-xl"></i>
             </a>
         </li>
         <li>
-            <a style="color: rgb(52, 48, 48);" href="https://hashnode.com/@suraj-rao" target="_blank">
+            <a class="social-icon-link" href="https://hashnode.com/@suraj-rao" target="_blank">
                 <i class="fa-brands fa-hashnode fa-xl"></i>
             </a>
         </li>
@@ -144,25 +148,104 @@
 			<section class="colorlib-about" data-section="about">
 				<div class="colorlib-narrow-content">
 					<div class="row">
-						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="col-md-12">
-									<div class="about-desc">
-										<span class="heading-meta">About Me</span>
-										<h2 class="colorlib-heading">Who Am I?</h2>
-										<p style="font-size: medium; text-align: justify;">Hi, I'm Suraj Rao. I'm an AI Engineer specializing in computer vision currently pursuing my Master's in Applied Machine Learning at the University of Maryland.</p>
-										<p style="font-size: medium; text-align: justify;">Most of my work in AI has been driven by a simple question: how do you take a model from an idea or research paper and turn it into something that delivers real-world value?</em></p>
-										<p style="font-size: medium; text-align: justify;">Over the last few years, I've worked on problems across computer vision, multimodal AI, edge AI, model optimization and machine learning systems. I've built and optimized solutions for video analytics, semantic search, object detection, and edge deployment in both industry and research settings. My work has taken me from deploying vision systems across multiple camera streams and accelerating inference on edge devices to building semantic search engines and evaluating state-of-the-art transformer architectures for challenging real-world use cases.</p>
-										<p style="font-size: medium; text-align: justify;">Along the way, I've realized that building useful AI isn't just about better models. It's about understanding the problem deeply, making the right trade-offs and designing systems that are reliable in production. I enjoy the process of taking ideas from experimentation to deployment and continuously improving them through iteration and optimization.</p>
-										<p style="font-size: medium; text-align: justify;">Having studied and worked across several cities in India and now in the United States, I've come to appreciate different perspectives and ways of thinking. I try to contribute through both technical problem-solving and thoughtful collaboration, whether that's optimizing a system, exploring a new idea, or helping a project move forward.</p>
-									</div>
-									<div class="about-desc">
-										<img style=" width: 100%;" src="images/companies.png" alt="Cinque Terre">
-									</div>
-								</div>
-							</div>
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">About Me</span>
+							<h2 class="colorlib-heading">Who Am I?</h2>
 						</div>
 					</div>
+					<div class="row about-split">
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<p class="about-lead">Exploring ways to solve the engineering challenges that turn AI ideas into <em>reliable</em>, real world applications.</p>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<p class="about-body">I am an AI Engineer specializing in computer vision and currently pursuing my Master's in Applied Machine Learning at the University of Maryland.</p>
+							<p class="about-body">I enjoy building AI across:</p>
+							<ul class="about-focus-list">
+								<li><i class="icon-check"></i> Computer Vision</li>
+								<li><i class="icon-check"></i> Edge AI</li>
+								<li><i class="icon-check"></i> LLM and RAG Based Systems</li>
+								<li><i class="icon-check"></i> AI Agents</li>
+								<li><i class="icon-check"></i> AI Workflow Automation</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="colorlib-experience" data-section="experience">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Work Experience</span>
+							<h2 class="colorlib-heading animate-box">How have I made an impact?</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+				         <div class="timeline-centered">
+
+							<!-- UMD MIRAGE Lab -->
+							<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+								<div class="timeline-entry-inner">
+														<div class="timeline-icon color-5 logo-badge-bg" style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+																<img src="images/umd_mirage_lab_logo.png" alt="UMD MIRAGE Lab Logo" style="width: 82%; height: 82%; object-fit: contain; border-radius: 50%;" />
+															</div>
+															<div class="timeline-label">
+																<h2>UMD MIRAGE Lab<br><span style="font-size: small;"><strong>AI Research Assistant</strong><br>Jan 2026 - Present</span></h2>
+										<ul>
+											<li style="text-align: justify;">Built end-to-end lattice defect detection pipeline using YOLOv26 on ~21K images across 3 materials for edge deployment</li>
+											<li style="text-align: justify;">Addressed 1:9 class imbalance using data augmentation and PyTorch weighted sampling, improving minority class detection</li>
+											<li style="text-align: justify;">Improved thickness classification by analyzing failure cases and refining training strategies, reducing false positives by 45%</li>
+											<li style="text-align: justify;">Achieved 96.3% mAP across 6 classes and deployed on NVIDIA Jetson using ONNX and TensorRT for real-time inspection</li>
+										</ul>
+									</div>
+								</div>
+							</article>
+
+							<!-- Vision and Graphics Lab, IIT Delhi -->
+							<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+								<div class="timeline-entry-inner">
+														<div class="timeline-icon color-5 logo-badge-bg" style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+																<img src="images/iitd.png" alt="IIT Delhi Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
+															</div>
+															<div class="timeline-label">
+																<h2>Vision and Graphics Lab, IIT Delhi<br><span style="font-size: small;"><strong>AI Research Engineer</strong><br>Oct 2024 - Jul 2025</span></h2>
+										<ul>
+											<li style="text-align: justify;">Contributed to occluded vehicle detection by evaluating transformer-based vision models in Indian road scenarios</li>
+											<li style="text-align: justify;">Curated high-occlusion (more than 50%) data from RSUD20K, IDD, BDD100K via pseudo-labeling and built a Tkinter GUI for false positive correction, reducing annotation time from 7 min to 15 sec (~96%)</li>
+											<li style="text-align: justify;">Fine-tuned 4 SOTA transformer detectors (DETR, DINO, Grounding DINO, Co-DETR) on 4 NVIDIA GPUs using distributed multi-GPU training and benchmarked them using mAP and recall</li>
+										</ul>
+									</div>
+								</div>
+							</article>
+
+							<!-- Mantra Softech -->
+							<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+								<div class="timeline-entry-inner">
+														<div class="timeline-icon color-5 logo-badge-bg" style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+																<img src="images/mantra_logo.jpeg" alt="Mantra Softech Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
+															</div>
+															<div class="timeline-label">
+																<h2>Mantra Softech<br><span style="font-size: small;"><strong>AI Research Engineer Intern</strong><br>Dec 2023 - Oct 2024</span></h2>
+										<ul>
+											<li style="text-align: justify;">Built and optimized video surveillance pipeline by deploying real-time YOLOv8 for people detection and counting</li>
+											<li style="text-align: justify;">Reduced model size 4× via quantization, enabling parallel deployment across 4 camera streams using multiprocessing</li>
+											<li style="text-align: justify;">Increased throughput from 10 to 35 FPS via frame filtering, batching and model profiling; deployed on RSC-101 edge device</li>
+											<li style="text-align: justify;">Evaluated DALL-E Mini, Stable Diffusion, CLIP to build a text-to-video retrieval system for ~300+ hours of video footage</li>
+										</ul>
+									</div>
+								</div>
+							</article>
+
+					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-none">
+					               </div>
+					            </div>
+					         </article>
+					      </div>
+					   </div>
+				   </div>
 				</div>
 			</section>
 
@@ -171,10 +254,10 @@
 					<div class="row">
 						<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<span class="heading-meta">My Work</span>
-							<h2 class="colorlib-heading animate-box">How do I turn ideas into results?</h2>
+							<h2 class="colorlib-heading animate-box">Projects I've built</h2>
 						</div>
 					</div>
-					
+
 					<div class="row">
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 							<div class="project" style="background-image: url(images/insightai_dashboard.png);">
@@ -259,74 +342,9 @@
 								</div>
 							</div>
 						</div>
-
-						<!-- Secure Cloud using Hybrid Cryptography
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/secure_cloud.png);">
-								<div class="desc">
-									<div class="con">
-										<h3 style="text-align: center; padding-top: 10ch;">
-											<a style="border: 2px solid white;" href="https://github.com/surajrao2003/Secure-Cloud-using-Hybrid-Cryptography" target="_blank" class="btn btn-dark" role="button" aria-pressed="Checkout">Read More</a>
-										</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						-->
-						
-						<!-- Human Face Detection
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/human_face_detection.png);">
-								<div class="desc">
-									<div class="con">
-										<h3 style="text-align: center; padding-top: 10ch;">
-											<a style="border: 2px solid white;" href="https://github.com/surajrao2003/Human-Face-Detection" target="_blank" class="btn btn-dark" role="button" aria-pressed="Checkout">Read More</a>
-										</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						-->					
 					</div>
 				</div>
 			</section>
-
-			<!-- <section class="colorlib-services" data-section="expertise">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">What I do?</span>
-							<h2 class="colorlib-heading">My Expertise</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<div class="services color-1">
-								<h3> <b>Product Management Skillset</b></h3>
-								<h3 style="font-size: medium; text-align: center;line-height: 20pt;">Product Strategy  | Product Road Mapping  |  Market Research  |  User Segmentation  |  Prototyping  Competitive Analysis  |  Product Design | User Experience (UX) |  Product Ideation and Validation   Wireframing   |  User Empathy  |  Scrum and Agile </h3>
-							</div>
-						</div>
-					</div>	
-
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<div class="services color-2" >
-								<h3> <b>Data Analytics and Dashboarding</b></h3>
-								<h3 style="font-size: medium; text-align: center; line-height: 20pt;">  SQL  |  Tableau  |  Power BI  | Microsoft Excel  |  Data Visualization  |  A/B Testing  |  Hypothesis Testing  <br>  SPSS  |  Data Manipulation  |  Python Data Visualization Libraries : NumPy, Pandas, Matplotlib, SeaBorn </h3>
-							</div>
-						</div>
-					</div>	
-
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<div class="services color-3"  >
-								<h3> <b>Interpersonal Skills</b></h3>
-								<h3 style="font-size: medium; text-align: center; line-height: 20pt;">Effective Communication  | Stakeholder Management  |  Collaboration  |  Problem-Solving  |  Negotiation   Design Thinking  |  Resilience     |   Time and Task Management  |  Presentation Skills  </h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section> -->
 
 
 
@@ -335,7 +353,7 @@
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<span class="heading-meta">What I do?</span>
-							<h2 class="colorlib-heading">My Expertise</h2>
+							<h2 class="colorlib-heading">My Skills</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -345,22 +363,22 @@
 								<h3 style="font-size: medium; text-align: center;line-height: 20pt;">Python | C/C++ | SQL | HTML | CSS</h3>
 							</div>
 						</div>
-					</div>	
+					</div>
 
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<div class="services color-2" >
-								<h3> <b>AI &amp; Data Science</b></h3>
-								<h3 style="font-size: medium; text-align: center; line-height: 20pt;">LLMs | RAG | Agentic AI | Transformers | Prompt Engineering | Fine-Tuning | Model Evaluation | PyTorch | Hugging Face | Scikit-Learn | NumPy | Pandas | Matplotlib | OpenCV</h3>
+								<h3> <b>Machine Learning &amp; AI</b></h3>
+								<h3 style="font-size: medium; text-align: center; line-height: 20pt;">PyTorch | Hugging Face | Scikit-learn | NumPy | Pandas | Matplotlib | Transformers | LLMs | Prompt Engineering | Fine-Tuning | LLM Inference</h3>
 							</div>
 						</div>
-					</div>	
+					</div>
 
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<div class="services color-3"  >
-								<h3> <b>Deployment &amp; Optimization</b></h3>
-								<h3 style="font-size: medium; text-align: center; line-height: 20pt;">Docker | FastAPI | Flask | Streamlit | AWS SageMaker | MLflow | TensorBoard | CI/CD | CUDA | ONNX | Quantization</h3>
+								<h3> <b>Computer Vision</b></h3>
+								<h3 style="font-size: medium; text-align: center; line-height: 20pt;">OpenCV | Object Detection | Segmentation | CNNs | Vision Transformers (ViTs) | Vision Language Models (VLMs) | YOLO | Data Annotation | CVAT | Edge AI | ONNX | TensorRT</h3>
 							</div>
 						</div>
 					</div>
@@ -368,8 +386,8 @@
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<div class="services color-4"  >
-								<h3> <b>Tools &amp; Platforms</b></h3>
-								<h3 style="font-size: medium; text-align: center; line-height: 20pt;">Git | Linux | FAISS | OpenAI API | Gemini API | Claude API | Tkinter | Cursor | Claude Code</h3>
+								<h3> <b>Agentic AI &amp; Deployment</b></h3>
+								<h3 style="font-size: medium; text-align: center; line-height: 20pt;">RAG | AI Agents | LangChain | LangGraph | ChromaDB | FAISS | Ollama | n8n | ElevenLabs Voice Agents | FastAPI | Flask | Streamlit | Docker | Kubernetes | GitHub Actions | CI/CD | AWS SageMaker | MLflow | TensorBoard | CUDA | Quantization</h3>
 							</div>
 						</div>
 					</div>
@@ -377,8 +395,17 @@
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<div class="services color-5"  >
-								<h3> <b>Interpersonal Skills</b></h3>
-								<h3 style="font-size: medium; text-align: center; line-height: 20pt;">Effective Communication | Collaboration | Problem Solving | Design Thinking | Negotiation | Time Management | Resilience | Presentation Skills</h3>
+								<h3> <b>Cloud, APIs &amp; Databases</b></h3>
+								<h3 style="font-size: medium; text-align: center; line-height: 20pt;">Azure OpenAI | Azure AI Search | OpenAI API | Gemini API | Claude API | PostgreSQL | Azure Database for PostgreSQL | Git | Linux | Cursor | Claude Code</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<div class="services color-6"  >
+								<h3> <b>Professional Skills</b></h3>
+								<h3 style="font-size: medium; text-align: center; line-height: 20pt;">Effective Communication | Collaboration | Problem Solving | Design Thinking | Time Management | Presentation Skills | Documentation</h3>
 							</div>
 						</div>
 					</div>
@@ -399,7 +426,7 @@
         <div class="block-47 d-flex mb-5">
             <blockquote class="block-47-quote">
                 <p style="text-align: justify;">&ldquo;I had the pleasure of mentoring Suraj. He quickly adapted to our workflows and took ownership of the tasks. Suraj's eagerness to learn and positive attitude made him a strong addition to the team. I am confident he will succeed in any role he pursues. I highly recommend him for future opportunities.&rdquo;</p>
-                <cite class="block-47-quote-author">&mdash; Urmila Airsang, <a href="#">Lead Computer Vision at Mantra Softech</a></cite>
+                <cite class="block-47-quote-author">&mdash; Urmila Airsang, <span class="block-47-quote-role">Lead Computer Vision at Mantra Softech</span></cite>
             </blockquote>
         </div>
     </div>
@@ -410,91 +437,13 @@
         <div class="block-47 d-flex mb-5">
             <blockquote class="block-47-quote">
                 <p style="text-align: justify;">&ldquo;Suraj and I worked together as part of the Mobility group in the Vision Lab at IIT Delhi. He's an excellent problem solver and is always up for a good challenge. He brought a fun, positive vibe to the lab and I really enjoyed our time together.&rdquo;</p>
-                <cite class="block-47-quote-author">&mdash; Sarvesh Thakur, <a href="#">PhD Researcher in Perception at IIT Delhi</a></cite>
+                <cite class="block-47-quote-author">&mdash; Sarvesh Thakur, <span class="block-47-quote-role">PhD Researcher in Perception at IIT Delhi</span></cite>
             </blockquote>
         </div>
     </div>
 </div>
 				</div>
 			</section>
-
-			<section class="colorlib-experience" data-section="experience">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Work Experience</span>
-							<h2 class="colorlib-heading animate-box">How have I made an impact?</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-				         <div class="timeline-centered">
-
-							<!-- UMD MIRAGE Lab -->
-							<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-								<div class="timeline-entry-inner">
-														<div class="timeline-icon color-5" style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: white !important;">
-																<img src="images/umd_mirage_lab_logo.png" alt="UMD MIRAGE Lab Logo" style="width: 82%; height: 82%; object-fit: contain; border-radius: 50%;" />
-															</div>
-															<div class="timeline-label">
-																<h2>UMD MIRAGE Lab<br><span style="font-size: small;">AI Research Assistant<br>Jan 2026 - Present</span></h2>
-										<ul>
-											<li style="text-align: justify;">Built end-to-end lattice defect detection pipeline using YOLOv26 on ~21K images across 3 materials for edge deployment</li>
-											<li style="text-align: justify;">Addressed 1:9 class imbalance using data augmentation and PyTorch weighted sampling, improving minority class detection</li>
-											<li style="text-align: justify;">Improved thickness classification by analyzing failure cases and refining training strategies, reducing false positives by 45%</li>
-											<li style="text-align: justify;">Achieved 96.3% mAP across 6 classes and deployed on NVIDIA Jetson using ONNX and TensorRT for real-time inspection</li>
-										</ul>
-									</div>
-								</div>
-							</article>
-
-							<!-- Vision and Graphics Lab, IIT Delhi -->
-							<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-								<div class="timeline-entry-inner">
-														<div class="timeline-icon color-5" style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: white !important;">
-																<img src="images/iitd.png" alt="IIT Delhi Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
-															</div>
-															<div class="timeline-label">
-																<h2>Vision and Graphics Lab, IIT Delhi<br><span style="font-size: small;">AI Research Engineer<br>Oct 2024 - Jul 2025</span></h2>
-										<ul>
-											<li style="text-align: justify;">Contributed to occluded vehicle detection by evaluating transformer-based vision models in Indian road scenarios</li>
-											<li style="text-align: justify;">Curated high-occlusion (more than 50%) data from RSUD20K, IDD, BDD100K via pseudo-labeling and built a Tkinter GUI for false positive correction, reducing annotation time from 7 min to 15 sec (~96%)</li>
-											<li style="text-align: justify;">Fine-tuned 4 SOTA transformer detectors (DETR, DINO, Grounding DINO, Co-DETR) on 4 NVIDIA GPUs using distributed multi-GPU training and benchmarked them using mAP and recall</li>
-										</ul>
-									</div>
-								</div>
-							</article>
-
-							<!-- Mantra Softech -->
-							<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-								<div class="timeline-entry-inner">
-														<div class="timeline-icon color-5" style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: white !important;">
-																<img src="images/mantra_logo.jpeg" alt="Mantra Softech Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
-															</div>
-															<div class="timeline-label">
-																<h2>Mantra Softech<br><span style="font-size: small;">AI Research Engineer Intern<br>Dec 2023 - Oct 2024</span></h2>
-										<ul>
-											<li style="text-align: justify;">Built and optimized video surveillance pipeline by deploying real-time YOLOv8 for people detection and counting</li>
-											<li style="text-align: justify;">Reduced model size 4× via quantization, enabling parallel deployment across 4 camera streams using multiprocessing</li>
-											<li style="text-align: justify;">Increased throughput from 10 to 35 FPS via frame filtering, batching and model profiling; deployed on RSC-101 edge device</li>
-											<li style="text-align: justify;">Evaluated DALL-E Mini, Stable Diffusion, CLIP to build a text-to-video retrieval system for ~300+ hours of video footage</li>
-										</ul>
-									</div>
-								</div>
-							</article>
-
-					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-none">
-					               </div>
-					            </div>
-					         </article>
-					      </div>
-					   </div>
-				   </div>
-				</div>
-			</section>
-
 
 			<section class="colorlib-education" data-section="education">
 				<div class="colorlib-narrow-content">
@@ -624,51 +573,68 @@
 			<section class="colorlib-contact" data-section="contact">
 				<div class="colorlib-narrow-content">
 					<div class="row">
-						<div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<span class="heading-meta">Get in Touch</span>
 							<h2 class="colorlib-heading">Let’s start a conversation!</h2>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-5">
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-globe-outline"></i>
+					<div class="row contact-layout">
+						<div class="col-md-7 animate-box" data-animate-effect="fadeInLeft">
+							<form id="contact-form" novalidate>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="form-label" for="contact-name">Name <span class="required-mark">*</span></label>
+											<input type="text" id="contact-name" name="name" class="form-control" placeholder="Your name">
+											<span class="form-error" id="contact-name-error"></span>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="form-label" for="contact-email">Email <span class="required-mark">*</span></label>
+											<input type="email" id="contact-email" name="email" class="form-control" placeholder="you@company.com">
+											<span class="form-error" id="contact-email-error"></span>
+										</div>
+									</div>
 								</div>
-								<div class="colorlib-text">
-									<p><a href="#">surajrao@umd.edu</a></p>
+								<div class="form-group">
+									<label class="form-label" for="contact-company">Company (optional)</label>
+									<input type="text" id="contact-company" name="company" class="form-control" placeholder="Company name">
+									<span class="form-error" id="contact-company-error"></span>
 								</div>
-							</div>
-
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-map"></i>
+								<div class="form-group">
+									<label class="form-label" for="contact-subject">Subject <span class="required-mark">*</span></label>
+									<input type="text" id="contact-subject" name="subject" class="form-control" placeholder="What&rsquo;s this about?">
+									<span class="form-error" id="contact-subject-error"></span>
 								</div>
-								<div class="colorlib-text">
-									<p>College Park, MD</p>
+								<div class="form-group">
+									<label class="form-label" for="contact-message">Message <span class="required-mark">*</span></label>
+									<textarea id="contact-message" name="message" cols="30" rows="7" class="form-control" placeholder="Tell me about the role, the stack, or what you're trying to build..."></textarea>
+									<span class="form-error" id="contact-message-error"></span>
 								</div>
-							</div>
-
+								<div class="form-group">
+									<button type="submit" class="btn btn-primary btn-send-message">Send Message</button>
+								</div>
+							</form>
 						</div>
-						<div class="col-md-7 col-md-push-1">
-							<div class="row">
-								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
-									<form action="mailto:surajrao@umd.edu" method="post" enctype="text/plain">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name">
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Email">
-										</div>
-										<div class="form-group">
-											<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-										</div>
-										<div class="form-group">
-											<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
-										</div>
-									</form>
-								</div>
-								
+						<div class="col-md-4 col-md-offset-1 contact-info animate-box" data-animate-effect="fadeInRight">
+							<p class="contact-info-tagline"><span class="contact-info-tagline-accent">Actively Job Searching.</span> Looking for AI/ML, Computer Vision or AI Automation Engineering roles. <span class="contact-info-tagline-accent">Let's talk.</span></p>
+							<div class="contact-info-divider"></div>
+							<div class="contact-info-block">
+								<span class="heading-meta">Direct Email</span>
+								<p class="contact-info-main"><a href="mailto:surajrao@umd.edu">surajrao@umd.edu</a></p>
+							</div>
+							<div class="contact-info-block">
+								<span class="heading-meta">Based In</span>
+								<p class="contact-info-sub">Washington, D.C. metropolitan</p>
+								<p class="contact-info-sub">Open to Relocation</p>
+							</div>
+							<div class="contact-info-block">
+								<span class="heading-meta">Elsewhere</span>
+								<ul class="contact-elsewhere-list">
+									<li><a class="contact-elsewhere-link" href="https://github.com/surajrao2003" target="_blank">GitHub</a></li>
+									<li><a class="contact-elsewhere-link" href="https://www.linkedin.com/in/rao-suraj/" target="_blank">LinkedIn</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
