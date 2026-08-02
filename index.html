@@ -1,6 +1,12 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+	<script>
+		(function() {
+			var stored = localStorage.getItem('theme');
+			document.documentElement.setAttribute('data-theme', stored === 'dark' ? 'dark' : 'light');
+		})();
+	</script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title> Suraj Rao | Portfolio </title>
@@ -130,7 +136,7 @@
 					<h1 class="hero-name">Hi, I'm Suraj</h1>
 					<p class="hero-tagline"> AI Engineer crafting intelligent systems across vision, language, and automation.</p>
 
-					<p class="hero-resume"><a class="btn btn-primary" href="Suraj Rao's Resume.pdf" target="_blank" download>Download My Resume <i class="icon-download4"></i></a></p>
+					<p class="hero-resume"><a class="btn btn-primary" href="Suraj Rao's Resume.pdf" target="_blank" rel="noopener">View My Resume <i class="icon-download4 hero-resume-icon"></i></a></p>
 
 					<!-- Voice agent hero orb (WebGL). Remove this block + js/voice-orb.js + js/voice-orb-3d.js + their <script> tags to drop the voice agent entirely. -->
 					<div class="voice-orb-wrap">

@@ -489,6 +489,10 @@ figure {
     padding: 10px 15px !important;
     border: none;
     font-weight: 400; }
+  #colorlib-hero .hero-resume-icon {
+    display: inline-block;
+    margin-left: 4px;
+    transform: rotate(-90deg); }
 
 body.offcanvas {
   overflow-x: hidden; }

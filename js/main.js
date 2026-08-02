@@ -221,8 +221,6 @@
 		var storedTheme = localStorage.getItem(storageKey);
 		if (storedTheme === 'dark' || storedTheme === 'light') {
 			applyTheme(storedTheme);
-		} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			applyTheme('dark');
 		} else {
 			applyTheme('light');
 		}
