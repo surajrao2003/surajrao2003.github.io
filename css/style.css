@@ -898,7 +898,7 @@ body.offcanvas {
         color: #000; }
     @media screen and (max-width: 768px) {
       .project .desc {
-        background: var(--overlay-soft); }
+        background: #BEBEBE; }
         .project .desc h3 {
           font-style: 28px;
           color: #000; }
