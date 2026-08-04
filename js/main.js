@@ -340,6 +340,34 @@
 
 	};
 
+	var projectTapToggle = function() {
+
+		if ( !isMobile.any() ) {
+			return;
+		}
+
+		$(document).on('touchstart click', '.project', function(e) {
+			var $project = $(this);
+
+			if ( $(e.target).closest('a').length ) {
+				return;
+			}
+
+			if ( !$project.hasClass('active') ) {
+				e.preventDefault();
+				$('.project').not($project).removeClass('active');
+				$project.addClass('active');
+			}
+		});
+
+		$(document).on('touchstart click', function(e) {
+			if ( !$(e.target).closest('.project').length ) {
+				$('.project').removeClass('active');
+			}
+		});
+
+	};
+
 	// Document on load.
 	$(function(){
 		contactForm();
@@ -356,6 +384,7 @@
 
 		mobileMenuOutsideClick();
 		sliderMain();
+		projectTapToggle();
 	});
 
 
