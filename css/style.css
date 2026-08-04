@@ -421,8 +421,8 @@ figure {
   #colorlib-hero .voice-orb {
     --orb-scale: 1;
     position: relative;
-    width: 257px;
-    height: 257px;
+    width: 206px;
+    height: 206px;
     border-radius: 50%;
     border: none;
     padding: 0;
