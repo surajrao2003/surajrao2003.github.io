@@ -898,22 +898,27 @@ body.offcanvas {
         color: #000; }
     @media screen and (max-width: 768px) {
       .project .desc {
-        opacity: 1;
         background: var(--overlay-soft); }
         .project .desc h3 {
           font-style: 28px;
-          -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
           color: #000; }
-        .project .desc span {
+        .project.active .desc h3,
+        .project:hover .desc h3 {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+        .project.active .desc span,
+        .project:hover .desc span {
           -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0); } }
-  .project:hover .desc {
+  .project:hover .desc,
+  .project.active .desc {
     opacity: 1; }
-    .project:hover .desc h3 {
+    .project:hover .desc h3,
+    .project.active .desc h3 {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
-    .project:hover .desc span {
+    .project:hover .desc span,
+    .project.active .desc span {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
 
